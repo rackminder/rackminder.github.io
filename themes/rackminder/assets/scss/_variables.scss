@@ -1,0 +1,207 @@
+// ============================================
+// RackMinder SCSS Variables
+// Outdoor/Adventure Brand Theme
+// ============================================
+
+// --------------------------------------------
+// Color Palette
+// --------------------------------------------
+
+// Primary Colors (Outdoor/Adventure)
+$color-forest-green: #2C5F2D;  // Trust, nature, safety - primary brand
+$color-earth-orange: #E97451;  // Energy, adventure - CTA accent
+$color-sky-blue: #4A90A4;      // Freedom, clarity - secondary
+
+// Neutral Colors (Dark Theme)
+$color-charcoal: #2B2D2F;      // Dark theme background
+$color-slate-gray: #3A3F44;    // Secondary backgrounds, cards
+$color-warm-gray: #6B7075;     // Tertiary text, borders
+$color-off-white: #F5F3F0;     // Primary text on dark
+$color-pure-white: #FFFFFF;    // Accents, highlights
+
+// Functional Colors
+$color-success: #4CAF50;       // Available now, in stock
+$color-warning: #FFA726;       // Coming soon
+$color-alert: #E74C3C;         // Sold out, errors
+
+// Semantic Aliases
+$color-primary: $color-forest-green;
+$color-accent: $color-earth-orange;
+$color-secondary: $color-sky-blue;
+$color-background: $color-charcoal;
+$color-surface: $color-slate-gray;
+$color-text: $color-off-white;
+$color-text-muted: $color-warm-gray;
+
+// --------------------------------------------
+// Typography
+// --------------------------------------------
+
+// Font Families
+$font-logo: 'Orbitron', 'Futura', 'Arial Black', sans-serif;  // ONLY for logo/brand text
+$font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+$font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+
+// Font Sizes (Responsive - Mobile First)
+$font-size-hero-h1-mobile: 48px;
+$font-size-hero-h1-desktop: 72px;
+
+$font-size-section-h2-mobile: 36px;
+$font-size-section-h2-desktop: 48px;
+
+$font-size-feature-h3-mobile: 24px;
+$font-size-feature-h3-desktop: 32px;
+
+$font-size-body-large: 18px;
+$font-size-body: 16px;
+$font-size-body-small: 14px;
+$font-size-caption: 12px;
+
+// Line Heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Letter Spacing
+$letter-spacing-title: 0.05em;
+$letter-spacing-normal: 0;
+
+// --------------------------------------------
+// Spacing
+// --------------------------------------------
+
+// Section Padding (Vertical)
+$section-padding-desktop: 120px;
+$section-padding-tablet: 80px;
+$section-padding-mobile: 60px;
+
+// Component Spacing
+$spacing-xl: 48px;
+$spacing-lg: 32px;
+$spacing-md: 24px;
+$spacing-sm: 16px;
+$spacing-xs: 8px;
+
+// Grid Gutters
+$gutter-desktop: 32px;
+$gutter-mobile: 16px;
+
+// Max Content Width
+$max-content-width: 1200px;
+
+// --------------------------------------------
+// Breakpoints
+// --------------------------------------------
+
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;
+
+// Media Query Mixins
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$breakpoint-wide}) {
+    @content;
+  }
+}
+
+// --------------------------------------------
+// UI Elements
+// --------------------------------------------
+
+// Border Radius
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 16px;
+$border-radius-xl: 24px;
+
+// Shadows
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+$shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.25);
+
+// Glow Shadows (for CTAs)
+$shadow-glow-orange: 0 8px 24px rgba(233, 116, 81, 0.4);
+$shadow-glow-green: 0 8px 24px rgba(44, 95, 45, 0.4);
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Z-index Layers
+$z-index-dropdown: 100;
+$z-index-sticky: 200;
+$z-index-modal: 500;
+$z-index-toast: 600;
+
+// --------------------------------------------
+// Glassmorphism Effect
+// --------------------------------------------
+
+$glass-background: rgba(58, 63, 68, 0.6);
+$glass-blur: 10px;
+$glass-border: 1px solid rgba(245, 243, 240, 0.1);
+
+@mixin glassmorphism {
+  background: $glass-background;
+  backdrop-filter: blur($glass-blur);
+  border: $glass-border;
+  border-radius: $border-radius-lg;
+}
+
+// --------------------------------------------
+// Gradient Utilities
+// --------------------------------------------
+
+$gradient-hero-overlay: linear-gradient(135deg, rgba(44, 95, 45, 0.8) 0%, rgba(74, 144, 164, 0.6) 100%);
+$gradient-cta-button: linear-gradient(45deg, #E97451, #F4A460);
+
+// --------------------------------------------
+// Header/Nav Dimensions
+// --------------------------------------------
+
+$header-height-default: 80px;
+$header-height-scrolled: 60px;
+
+// --------------------------------------------
+// Accessibility
+// --------------------------------------------
+
+// Minimum tap target size (Apple HIG)
+$min-tap-target: 44px;
+
+// Focus outline
+$focus-outline-width: 2px;
+$focus-outline-color: $color-accent;
+
+// Reduced motion preference
+@mixin respect-motion-preference {
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,12 @@
+name = "RackMinder"
+license = "MIT"
+licenselink = "https://github.com/rackminder/website/blob/main/LICENSE"
+description = "Custom Hugo theme for RackMinder - Outdoor lifestyle brand for roof rack safety"
+homepage = "https://rackminder.com/"
+tags = ["outdoor", "lifestyle", "single-page", "responsive", "dark-theme"]
+features = ["responsive", "dark-theme", "mobile-first", "accessibility"]
+min_version = "0.120.0"
+
+[author]
+  name = "Rack Minder LLC"
+  homepage = "https://rackminder.com/"

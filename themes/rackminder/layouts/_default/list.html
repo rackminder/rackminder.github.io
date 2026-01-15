@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<section style="padding: 120px 0 80px; min-height: 100vh;">
+  <div class="container">
+    <header style="margin-bottom: 3rem; text-align: center;">
+      <h1>{{ .Title }}</h1>
+      {{ if .Description }}
+      <p class="text-muted">{{ .Description }}</p>
+      {{ end }}
+    </header>
+
+    <div class="content">
+      {{ .Content }}
+
+      {{ if .Pages }}
+      <div style="margin-top: 3rem;">
+        {{ range .Pages }}
+        <article style="margin-bottom: 2rem; padding: 1.5rem; background: rgba(58, 63, 68, 0.6); border-radius: 12px;">
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          {{ if .Description }}
+          <p class="text-muted">{{ .Description }}</p>
+          {{ end }}
+          <p><a href="{{ .Permalink }}" class="btn btn-secondary btn-sm">Read More →</a></p>
+        </article>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

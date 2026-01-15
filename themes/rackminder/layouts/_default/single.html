@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+<article class="legal-page" style="padding: 120px 0 80px; min-height: 100vh;">
+  <div class="container container--narrow">
+    {{/* Breadcrumb */}}
+    <nav aria-label="Breadcrumb" style="margin-bottom: 2rem;">
+      <a href="{{ .Site.BaseURL }}" style="color: #6B7075;">Home</a>
+      <span style="color: #6B7075; margin: 0 0.5rem;">&gt;</span>
+      <span>{{ .Title }}</span>
+    </nav>
+
+    {{/* Page Header */}}
+    <header style="margin-bottom: 3rem; text-align: center;">
+      <h1>{{ .Title }}</h1>
+      {{ if .Date }}
+      <p class="text-muted" style="font-size: 14px; margin-top: 1rem;">
+        Last Updated: {{ .Date.Format "January 2, 2006" }}
+      </p>
+      {{ end }}
+    </header>
+
+    {{/* Page Content */}}
+    <div class="content" style="max-width: 800px; margin: 0 auto;">
+      {{ .Content }}
+    </div>
+
+    {{/* Back to Home Link */}}
+    <div style="text-align: center; margin-top: 4rem;">
+      <a href="{{ .Site.BaseURL }}" class="btn btn-secondary">← Back to Home</a>
+    </div>
+  </div>
+</article>
+
+<style>
+/* Legal page specific styles */
+.legal-page .content {
+  line-height: 1.75;
+}
+
+.legal-page .content h2 {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-size: 32px;
+  color: #E97451;
+}
+
+.legal-page .content h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 24px;
+  color: #F5F3F0;
+}
+
+.legal-page .content ul,
+.legal-page .content ol {
+  margin-bottom: 1.5rem;
+}
+
+.legal-page .content li {
+  margin-bottom: 0.75rem;
+}
+
+.legal-page .content a {
+  color: #E97451;
+  text-decoration: underline;
+}
+
+.legal-page .content a:hover {
+  color: #F4A460;
+}
+
+.legal-page .content strong {
+  color: #F5F3F0;
+}
+
+.legal-page .content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .legal-page {
+    padding: 100px 0 60px;
+  }
+
+  .legal-page .content h2 {
+    font-size: 28px;
+  }
+
+  .legal-page .content h3 {
+    font-size: 20px;
+  }
+}
+</style>
+
+{{ end }}

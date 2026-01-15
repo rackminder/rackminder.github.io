@@ -1,0 +1,56 @@
+baseURL = "https://rackminder.com/"
+defaultContentLanguage = "en"
+theme = "rackminder"
+title = "RackMinder"
+
+[pagination]
+  pagerSize = 6
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[languages]
+  [languages.en]
+    languageCode = "en-US"
+    title = "RackMinder"
+    weight = 1
+
+[params]
+  author = "Rack Minder LLC"
+  logo = "RackMinder"
+  subtitle = "Never Worry About Your Garage Again"
+  description = "RackMinder keeps your gear safe—and your garage door intact. Using smart iBeacon technology, we alert you before you drive into your garage with a roof rack still loaded."
+
+  # Brand
+  tagline = "Protect your gear. Protect your garage. Enjoy your free time."
+
+  # Legal
+  trademark = "RackMinder™"
+  patent = "Patent Pending"
+  entity = "Rack Minder LLC"
+
+  # Contact
+  supportEmail = "support@rackminder.com"
+  privacyEmail = "privacy@rackminder.com"
+
+  # Social Media Links
+  [[params.social]]
+    name = "Instagram"
+    icon = "instagram"
+    url = "https://instagram.com/rackminder"
+
+  [[params.social]]
+    name = "Facebook"
+    icon = "facebook"
+    url = "https://facebook.com/rackminder"
+
+  [[params.social]]
+    name = "TikTok"
+    icon = "tiktok"
+    url = "https://tiktok.com/@rackminder"
+
+  [[params.social]]
+    name = "YouTube"
+    icon = "youtube"
+    url = "https://youtube.com/@rackminder"

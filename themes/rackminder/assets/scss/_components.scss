@@ -1,0 +1,520 @@
+// ============================================
+// Component Styles
+// Buttons, cards, forms, nav, footer
+// ============================================
+
+// --------------------------------------------
+// Buttons
+// --------------------------------------------
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  font-family: $font-body;
+  font-size: $font-size-body;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+  border: none;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  transition: transform $transition-fast, box-shadow $transition-normal;
+  min-height: $min-tap-target;
+  text-align: center;
+
+  &:focus {
+    outline: $focus-outline-width solid $focus-outline-color;
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-primary {
+  background: $gradient-cta-button;
+  color: $color-pure-white;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    box-shadow: $shadow-glow-orange;
+    color: $color-pure-white;
+  }
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: $color-text;
+  border: 2px solid $color-primary;
+
+  &:hover {
+    background-color: rgba($color-primary, 0.1);
+    border-color: lighten($color-primary, 10%);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $color-text-muted;
+  border: 1px solid $color-warm-gray;
+
+  &:hover {
+    color: $color-text;
+    border-color: $color-text;
+    box-shadow: none;
+  }
+}
+
+.btn-lg {
+  padding: $spacing-md $spacing-xl;
+  font-size: $font-size-body-large;
+}
+
+.btn-sm {
+  padding: $spacing-xs $spacing-md;
+  font-size: $font-size-body-small;
+}
+
+// --------------------------------------------
+// Header & Navigation
+// --------------------------------------------
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height-default;
+  background-color: rgba($color-background, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba($color-warm-gray, 0.2);
+  z-index: $z-index-sticky;
+  transition: height $transition-normal, background-color $transition-normal;
+
+  &.scrolled {
+    height: $header-height-scrolled;
+    background-color: rgba($color-background, 0.98);
+    box-shadow: $shadow-md;
+  }
+}
+
+.header-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  font-family: $font-logo;
+  font-size: 24px;
+  color: $color-text;
+  text-decoration: none;
+  letter-spacing: $letter-spacing-title;
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  img {
+    height: 40px;
+    width: auto;
+  }
+}
+
+.nav {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+}
+
+.nav-link {
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  color: $color-text;
+  padding: $spacing-xs $spacing-sm;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+  }
+
+  &.active {
+    color: $color-accent;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+// Mobile Menu Toggle
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-xs;
+  min-width: $min-tap-target;
+  min-height: $min-tap-target;
+
+  @include desktop {
+    display: none;
+  }
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $color-text;
+    transition: transform $transition-fast, opacity $transition-fast;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: rotate(45deg) translateY(7px);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-7px);
+    }
+  }
+}
+
+// Mobile Menu Overlay
+.mobile-menu {
+  position: fixed;
+  top: $header-height-default;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color-background, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: $z-index-dropdown;
+  transform: translateX(100%);
+  transition: transform $transition-normal;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing-lg;
+  gap: $spacing-sm;
+}
+
+.mobile-nav-link {
+  font-size: $font-size-body-large;
+  color: $color-text;
+  padding: $spacing-md;
+  text-align: center;
+  border-radius: $border-radius-sm;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: rgba($color-surface, 0.5);
+    color: $color-accent;
+  }
+}
+
+// --------------------------------------------
+// Footer
+// --------------------------------------------
+
+.footer {
+  background-color: darken($color-background, 3%);
+  border-top: 1px solid rgba($color-warm-gray, 0.2);
+  padding: $spacing-xl 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+  text-align: center;
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+  }
+}
+
+.footer-section {
+  h4 {
+    font-family: $font-body;
+    font-size: $font-size-body;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: $spacing-md;
+    color: $color-text;
+  }
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: $spacing-xs;
+  }
+
+  a {
+    color: $color-text-muted;
+    font-size: $font-size-body-small;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: center;
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $min-tap-target;
+  height: $min-tap-target;
+  border-radius: 50%;
+  background-color: rgba($color-surface, 0.5);
+  color: $color-text;
+  transition: background-color $transition-fast, transform $transition-fast;
+
+  &:hover {
+    background-color: $color-accent;
+    color: $color-pure-white;
+    transform: scale(1.1);
+  }
+}
+
+.footer-bottom {
+  margin-top: $spacing-xl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid rgba($color-warm-gray, 0.2);
+  text-align: center;
+  font-size: $font-size-body-small;
+  color: $color-text-muted;
+}
+
+// --------------------------------------------
+// Cards
+// --------------------------------------------
+
+.card {
+  @include glassmorphism;
+  padding: $spacing-lg;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.card-image {
+  width: 100%;
+  border-radius: $border-radius-md;
+  margin-bottom: $spacing-md;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.card-title {
+  margin-bottom: $spacing-sm;
+}
+
+.card-description {
+  color: $color-text-muted;
+  margin-bottom: $spacing-md;
+}
+
+// --------------------------------------------
+// Forms
+// --------------------------------------------
+
+.form-group {
+  margin-bottom: $spacing-md;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: $spacing-xs;
+  font-weight: $font-weight-semibold;
+  color: $color-text;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  font-family: $font-body;
+  font-size: $font-size-body;
+  color: $color-text;
+  background-color: rgba($color-surface, 0.5);
+  border: 1px solid rgba($color-warm-gray, 0.3);
+  border-radius: $border-radius-sm;
+  transition: border-color $transition-fast, background-color $transition-fast;
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent;
+    background-color: rgba($color-surface, 0.8);
+  }
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+// --------------------------------------------
+// Badges
+// --------------------------------------------
+
+.badge {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-body-small;
+  font-weight: $font-weight-semibold;
+  border-radius: $border-radius-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-success {
+  background-color: rgba($color-success, 0.2);
+  color: $color-success;
+}
+
+.badge-warning {
+  background-color: rgba($color-warning, 0.2);
+  color: $color-warning;
+}
+
+.badge-alert {
+  background-color: rgba($color-alert, 0.2);
+  color: $color-alert;
+}
+
+// --------------------------------------------
+// Store Badges (App Store, Google Play, Amazon)
+// --------------------------------------------
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  justify-content: center;
+  margin-top: $spacing-lg;
+}
+
+.store-badge {
+  display: inline-block;
+  transition: transform $transition-fast, opacity $transition-fast;
+  border-radius: $border-radius-sm;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: $focus-outline-width solid $focus-outline-color;
+    outline-offset: 2px;
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+.store-badge-disabled {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.store-badge-amazon {
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// --------------------------------------------
+// Scroll Animations
+// --------------------------------------------
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Stagger children animations
+.stagger-children {
+  > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  &.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.visible > *:nth-child(1) { transition-delay: 0.1s; }
+  &.visible > *:nth-child(2) { transition-delay: 0.2s; }
+  &.visible > *:nth-child(3) { transition-delay: 0.3s; }
+  &.visible > *:nth-child(4) { transition-delay: 0.4s; }
+}
+
+// Respect reduced motion preference
+@include respect-motion-preference;

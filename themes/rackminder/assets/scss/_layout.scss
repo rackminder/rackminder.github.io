@@ -1,0 +1,357 @@
+// ============================================
+// Layout Styles
+// Grid system, sections, and page structure
+// ============================================
+
+// --------------------------------------------
+// Container
+// --------------------------------------------
+
+.container {
+  width: 100%;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding: 0 $gutter-mobile;
+
+  @include desktop {
+    padding: 0 $gutter-desktop;
+  }
+}
+
+// --------------------------------------------
+// Grid System (12-column)
+// --------------------------------------------
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$gutter-mobile / 2);
+
+  @include desktop {
+    margin: 0 (-$gutter-desktop / 2);
+  }
+}
+
+.col {
+  flex: 1;
+  padding: 0 ($gutter-mobile / 2);
+
+  @include desktop {
+    padding: 0 ($gutter-desktop / 2);
+  }
+}
+
+// Column sizes (responsive)
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 percentage($i / 12);
+    max-width: percentage($i / 12);
+    padding: 0 ($gutter-mobile / 2);
+
+    @include desktop {
+      padding: 0 ($gutter-desktop / 2);
+    }
+  }
+}
+
+// Mobile: All columns stack
+@include mobile {
+  .col,
+  [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+// --------------------------------------------
+// Sections
+// --------------------------------------------
+
+section {
+  padding: $section-padding-mobile 0;
+
+  @include tablet {
+    padding: $section-padding-tablet 0;
+  }
+
+  @include desktop {
+    padding: $section-padding-desktop 0;
+  }
+}
+
+// Section with background
+.section-dark {
+  background-color: darken($color-background, 2%);
+}
+
+.section-light {
+  background-color: $color-surface;
+}
+
+// --------------------------------------------
+// Hero Section
+// --------------------------------------------
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: $section-padding-mobile 0;
+
+  @include desktop {
+    padding: $section-padding-desktop 0;
+  }
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $gradient-hero-overlay;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.hero-title {
+  margin-bottom: $spacing-md;
+  color: $color-pure-white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: $font-size-body-large;
+  margin-bottom: $spacing-xl;
+  color: $color-off-white;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-relaxed;
+}
+
+.hero-cta {
+  display: flex;
+  gap: $spacing-md;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+// --------------------------------------------
+// Feature Grid
+// --------------------------------------------
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-lg;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature-item {
+  @include glassmorphism;
+  padding: $spacing-lg;
+  text-align: center;
+  transition: transform $transition-normal, box-shadow $transition-normal;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-md;
+  color: $color-accent;
+
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.feature-title {
+  margin-bottom: $spacing-sm;
+  color: $color-text;
+}
+
+.feature-description {
+  font-size: $font-size-body-small;
+  color: $color-text-muted;
+  margin-bottom: 0;
+}
+
+// --------------------------------------------
+// How It Works Section
+// --------------------------------------------
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $gradient-cta-button;
+  color: $color-pure-white;
+  font-family: $font-heading;
+  font-size: 24px;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-md;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacing-md;
+  color: $color-accent;
+
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.step-title {
+  margin-bottom: $spacing-sm;
+}
+
+.step-description {
+  color: $color-text-muted;
+  margin-bottom: 0;
+}
+
+// --------------------------------------------
+// Product Showcase
+// --------------------------------------------
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-xl;
+
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.product-card {
+  @include glassmorphism;
+  padding: $spacing-xl;
+  text-align: center;
+}
+
+.product-image {
+  margin-bottom: $spacing-lg;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+}
+
+.product-title {
+  margin-bottom: $spacing-sm;
+}
+
+.product-description {
+  color: $color-text-muted;
+  margin-bottom: $spacing-lg;
+}
+
+// --------------------------------------------
+// Section Headers
+// --------------------------------------------
+
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+}
+
+.section-title {
+  margin-bottom: $spacing-sm;
+}
+
+.section-subtitle {
+  font-size: $font-size-body-large;
+  color: $color-text-muted;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+// --------------------------------------------
+// Responsive Utilities
+// --------------------------------------------
+
+.show-mobile {
+  display: block;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.hide-mobile {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}

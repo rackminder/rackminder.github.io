@@ -1,0 +1,54 @@
+<header class="header" id="header" role="banner">
+  <div class="container header-container">
+    {{/* Logo */}}
+    <a href="{{ .Site.BaseURL }}" class="logo" aria-label="{{ .Site.Title }} Home">
+      <img src="{{ "/logo.svg" | relURL }}" alt="{{ .Site.Title }} Logo">
+      <span class="logo-text hide-mobile">{{ .Site.Params.logo }}</span>
+    </a>
+
+    {{/* Desktop Navigation */}}
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      {{ if .IsHome }}
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#products" class="nav-link">Get Started</a>
+      {{ else }}
+      <a href="{{ .Site.BaseURL }}" class="nav-link">Home</a>
+      <a href="{{ .Site.BaseURL }}#how-it-works" class="nav-link">How It Works</a>
+      <a href="{{ .Site.BaseURL }}#features" class="nav-link">Features</a>
+      <a href="{{ .Site.BaseURL }}#products" class="nav-link">Get Started</a>
+      {{ end }}
+    </nav>
+
+    {{/* CTA Button (Desktop) */}}
+    <div class="hide-mobile">
+      <a href="#products" class="btn btn-primary">Download for iOS</a>
+    </div>
+
+    {{/* Mobile Menu Toggle */}}
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  {{/* Mobile Menu Overlay */}}
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      {{ if .IsHome }}
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="#features" class="mobile-nav-link">Features</a>
+      <a href="#products" class="mobile-nav-link">Get Started</a>
+      {{ else }}
+      <a href="{{ .Site.BaseURL }}" class="mobile-nav-link">Home</a>
+      <a href="{{ .Site.BaseURL }}#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="{{ .Site.BaseURL }}#features" class="mobile-nav-link">Features</a>
+      <a href="{{ .Site.BaseURL }}#products" class="mobile-nav-link">Get Started</a>
+      {{ end }}
+      <a href="#products" class="btn btn-primary" style="margin-top: 1rem;">Download for iOS</a>
+    </nav>
+  </div>
+</header>

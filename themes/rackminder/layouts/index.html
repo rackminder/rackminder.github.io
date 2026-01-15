@@ -1,0 +1,273 @@
+{{ define "main" }}
+
+{{/* Hero Section */}}
+<section class="hero" id="hero">
+  <div class="hero-background">
+    {{/* Placeholder for hero image - will be replaced with actual photography
+         Recommended: High-quality photo of outdoor enthusiast loading gear on roof rack
+         Search terms: "mountain bike roof rack", "kayak car roof", "outdoor adventure car" */}}
+    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(44, 95, 45, 0.9) 0%, rgba(74, 144, 164, 0.9) 50%, rgba(44, 95, 45, 0.9) 100%), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%232C5F2D%22 width=%22100%22 height=%22100%22/><path fill=%22%234A90A4%22 d=%22M0 50 L25 40 L50 50 L75 45 L100 55 L100 100 L0 100 Z%22 opacity=%220.3%22/><path fill=%22%23E97451%22 d=%22M20 30 L30 25 L35 30 L30 35 Z%22/><circle cx=%2250%22 cy=%2260%22 r=%225%22 fill=%22%23F5F3F0%22 opacity=%220.6%22/></svg>'); background-size: cover; background-position: center;"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1 class="hero-title">Never Worry About Your Garage Again</h1>
+    <p class="hero-subtitle">RackMinder keeps your gear safe—and your garage door intact</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn btn-primary btn-lg">Download for iOS</a>
+      <a href="#how-it-works" class="btn btn-secondary btn-lg">Learn More</a>
+    </div>
+  </div>
+</section>
+
+{{/* Problem/Solution Section */}}
+<section class="section-dark" id="problem">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">We've All Been There</h2>
+      <p class="section-subtitle">The sickening crunch of a roof rack hitting your garage door. RackMinder watches your back so you can focus on adventure.</p>
+    </div>
+  </div>
+</section>
+
+{{/* How It Works Section */}}
+<section id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">Three simple steps to protect your gear and garage</p>
+    </div>
+    <div class="steps-container">
+      <div class="step fade-in">
+        <div class="step-number">1</div>
+        <div class="step-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="10" r="3"/>
+            <path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.3 11.8a1 1 0 0 0 1.4 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/>
+            <circle cx="12" cy="10" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Attach Beacon to Your Gear</h3>
+        <p class="step-description">Place our weatherproof iBeacon on your bike, kayak, skis, or any roof rack load.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-number">2</div>
+        <div class="step-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2"/>
+            <line x1="12" y1="18" x2="12" y2="18.01"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Your Phone Knows You're Loaded</h3>
+        <p class="step-description">RackMinder automatically detects when you're driving with gear on your roof.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-number">3</div>
+        <div class="step-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+        </div>
+        <h3 class="step-title">Get Alerted Before You Pull In</h3>
+        <p class="step-description">Notifications on your phone, watch, and CarPlay remind you before garage disaster.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* Benefits Grid Section */}}
+<section class="section-dark" id="benefits">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Peace of Mind, Every Time</h2>
+      <p class="section-subtitle">Protect what matters most</p>
+    </div>
+    <div class="features-grid stagger-children">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="5.5" cy="17.5" r="3.5"/>
+            <circle cx="18.5" cy="17.5" r="3.5"/>
+            <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            <path d="M12 17.5V14l-3-3 4-3 2 3h3"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Protect Your Gear</h3>
+        <p class="feature-description">Keep your bikes, kayaks, skis, and outdoor equipment safe from damage.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Protect Your Garage</h3>
+        <p class="feature-description">Avoid costly repairs to your garage door and opener.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17m-2 0a2 2 0 1 0 4 0 2 2 0 1 0-4 0"/>
+            <path d="M17 17m-2 0a2 2 0 1 0 4 0 2 2 0 1 0-4 0"/>
+            <path d="M5 17H3v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2"/>
+            <path d="M9 17h6"/>
+            <path d="M14 6l-4 5h9"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Protect Your Car</h3>
+        <p class="feature-description">Prevent damage to your vehicle's roof, rack, and paint.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Peace of Mind</h3>
+        <p class="feature-description">Enjoy your free time—leave the worry to us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* Features Section */}}
+<section id="features">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Built for the Way You Live</h2>
+      <p class="section-subtitle">Simple, powerful features that just work</p>
+    </div>
+    <div class="row" style="align-items: center; margin-top: 3rem;">
+      <div class="col-12 col-6">
+        {{/* Placeholder for app screenshots carousel */}}
+        <div class="card">
+          <div class="card-image">
+            <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2C5F2D 0%, #4A90A4 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;">
+              <p>App Screenshot<br/>Placeholder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-6">
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem;">✓ Easy to Use</h3>
+            <p class="text-muted">No login required. Simple setup in minutes.</p>
+          </li>
+          <li style="margin-bottom: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem;">✓ Multi-Device</h3>
+            <p class="text-muted">Mix and match phones and tags. Family and friends ready.</p>
+          </li>
+          <li style="margin-bottom: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem;">✓ Customizable</h3>
+            <p class="text-muted">Multiple garages, multiple tags. Set it up your way.</p>
+          </li>
+          <li style="margin-bottom: 1.5rem;">
+            <h3 style="margin-bottom: 0.5rem;">✓ Fully Integrated</h3>
+            <p class="text-muted">Works with iPhone, Apple Watch, and CarPlay.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* Product Showcase Section */}}
+<section class="section-dark" id="products">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Get Started</h2>
+      <p class="section-subtitle">Everything you need to protect your gear</p>
+    </div>
+    <div class="product-grid">
+      {{/* iOS App */}}
+      <div class="product-card fade-in">
+        <div class="product-image">
+          {{/* Placeholder for app icon */}}
+          <div style="width: 150px; height: 150px; background: linear-gradient(135deg, #2C5F2D, #4A90A4); border-radius: 30px; margin: 0 auto;"></div>
+        </div>
+        <h3 class="product-title">RackMinder App</h3>
+        <p class="product-description">Available now for iPhone and Apple Watch. Free download, no subscriptions.</p>
+        <span class="badge badge-success">Available Now</span>
+        <div class="store-badges">
+          <a href="https://apps.apple.com/app/rackminder" class="store-badge" target="_blank" rel="noopener">
+            <svg viewBox="0 0 120 40" width="135" height="45">
+              <rect width="120" height="40" rx="5" fill="#000"/>
+              <path d="M24.5 20.5c0-3.1 2.5-4.6 2.6-4.7-1.4-2.1-3.6-2.4-4.4-2.4-1.9-.2-3.6 1.1-4.6 1.1-.9 0-2.4-1.1-4-1.1-2 0-3.9 1.2-5 3-2.1 3.7-.5 9.1 1.5 12.1 1 1.5 2.2 3.1 3.8 3 1.5-.1 2.1-1 3.9-1s2.4 1 4 1 2.7-1.5 3.7-2.9c1.2-1.7 1.7-3.3 1.7-3.4-.1 0-3.2-1.2-3.2-4.7zm-3-8.6c.8-1 1.4-2.4 1.2-3.8-1.2.1-2.7.8-3.5 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.8-.7 3.6-1.7z" fill="#fff"/>
+              <text x="42" y="16" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="8">Download on the</text>
+              <text x="42" y="28" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600">App Store</text>
+            </svg>
+          </a>
+          <a href="#android-waitlist" class="store-badge store-badge-disabled">
+            <svg viewBox="0 0 135 40" width="152" height="45">
+              <rect width="135" height="40" rx="5" fill="#3A3F44"/>
+              <path d="M20 10l-1.5 2.6-1.5-2.6h-1l2 3.4-2 3.4h1l1.5-2.6 1.5 2.6h1l-2-3.4 2-3.4h-1zm-7.5 2.6c-1.4 0-2.5 1.5-2.5 3.4s1.1 3.4 2.5 3.4 2.5-1.5 2.5-3.4-1.1-3.4-2.5-3.4zm10 0c-1.4 0-2.5 1.5-2.5 3.4s1.1 3.4 2.5 3.4 2.5-1.5 2.5-3.4-1.1-3.4-2.5-3.4z" fill="#6B7075"/>
+              <text x="35" y="16" fill="#6B7075" font-family="Inter, system-ui, sans-serif" font-size="8">Coming Soon on</text>
+              <text x="35" y="28" fill="#6B7075" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600">Google Play</text>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      {{/* Hardware Beacons */}}
+      <div class="product-card fade-in">
+        <div class="product-image">
+          {{/* Placeholder for beacon product photo */}}
+          <div style="width: 150px; height: 150px; background: #3A3F44; border-radius: 12px; margin: 0 auto; display: flex; align-items: center; justify-content: center; color: #E97451;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M8.5 8.5a6 6 0 0 1 7 0"/>
+              <path d="M5.5 5.5a10 10 0 0 1 13 0"/>
+              <path d="M15.5 15.5a6 6 0 0 1-7 0"/>
+              <path d="M18.5 18.5a10 10 0 0 1-13 0"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="product-title">iBeacon Tags</h3>
+        <p class="product-description">Weatherproof, long-lasting battery. Designed for outdoor adventures.</p>
+        <span class="badge badge-success">In Stock</span>
+        <div class="store-badges">
+          <a href="https://amazon.com/rackminder" class="store-badge store-badge-amazon" target="_blank" rel="noopener">
+            <svg viewBox="0 0 120 40" width="135" height="45">
+              <rect width="120" height="40" rx="5" fill="#FF9900"/>
+              <text x="12" y="16" fill="#000" font-family="Inter, system-ui, sans-serif" font-size="8">Available at</text>
+              <text x="12" y="28" fill="#000" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600">amazon</text>
+              <path d="M95 22c-3.5 2.6-8.5 4-12.8 4-6.1 0-11.5-2.2-15.6-6-.3-.3 0-.7.4-.5 4.4 2.6 9.9 4.1 15.6 4.1 3.8 0 8-0.8 11.9-2.4.6-.3 1.1.4.5.8z" fill="#000"/>
+            </svg>
+          </a>
+        </div>
+          <p style="margin-top: 1rem; font-size: 14px; color: #6B7075;">Starting at $29.99</p>
+        </div>
+      </div>
+    </div>
+
+    {{/* Android Waitlist */}}
+    <div id="android-waitlist" style="margin-top: 3rem; text-align: center;">
+      <h3>Want RackMinder on Android?</h3>
+      <p class="text-muted">Join the waitlist and be first to know when we launch on Google Play.</p>
+      <form style="max-width: 500px; margin: 1.5rem auto;">
+        <div class="form-group">
+          <input type="email" class="form-input" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-secondary btn-lg">Join Android Waitlist</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{{/* Social Proof / Testimonials Section (Placeholder) */}}
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Trusted by Outdoor Enthusiasts</h2>
+      <p class="section-subtitle">Join thousands who never worry about their garage again</p>
+    </div>
+    {{/* Placeholder for future testimonials */}}
+    <div style="text-align: center; padding: 3rem 0; color: #6B7075;">
+      <p>Testimonials coming soon as users start sharing their stories!</p>
+    </div>
+  </div>
+</section>
+
+{{ end }}
