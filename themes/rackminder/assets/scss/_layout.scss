@@ -113,11 +113,26 @@ section {
   width: 100%;
   height: 100%;
   z-index: -2;
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  &.active {
+    opacity: 1;
   }
 }
 
@@ -157,15 +172,41 @@ section {
   line-height: $line-height-relaxed;
 }
 
-.hero-cta {
-  display: flex;
-  gap: $spacing-md;
-  flex-direction: column;
+.scroll-indicator {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: $spacing-xl;
+  transition: all $transition-normal;
+  animation: bounce 2s infinite;
 
-  @include desktop {
-    flex-direction: row;
-    justify-content: flex-start;
+  &:hover {
+    border-color: $color-pure-white;
+    color: $color-pure-white;
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-accent;
+    box-shadow: 0 0 0 3px rgba($color-accent, 0.3);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
   }
 }
 

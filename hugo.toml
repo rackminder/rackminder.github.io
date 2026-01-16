@@ -36,6 +36,11 @@ title = "RackMinder"
 
   # Social Media Links
   [[params.social]]
+    name = "X"
+    icon = "x"
+    url = "https://x.com/rackminder"
+
+  [[params.social]]
     name = "Instagram"
     icon = "instagram"
     url = "https://instagram.com/rackminder"
@@ -43,14 +48,4 @@ title = "RackMinder"
   [[params.social]]
     name = "Facebook"
     icon = "facebook"
-    url = "https://facebook.com/rackminder"
-
-  [[params.social]]
-    name = "TikTok"
-    icon = "tiktok"
-    url = "https://tiktok.com/@rackminder"
-
-  [[params.social]]
-    name = "YouTube"
-    icon = "youtube"
-    url = "https://youtube.com/@rackminder"
+    url = "https://facebook.com/RackMinder"

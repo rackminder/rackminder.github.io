@@ -237,11 +237,11 @@ For GDPR or privacy-related questions: privacy@rackminder.com
 
 ## Summary of Key Terms
 
-✓ Must be 13+ to use the Service
-✓ You own your data - we never share it
-✓ Complete account deletion available in-app
-✓ All data permanently deleted within 30 days
-✓ Service provided "as is" without warranties
-✓ Disputes resolved through arbitration
-✓ Apple App Store compliant
-✓ GDPR compliant
+- Must be 13+ to use the Service
+- You own your data - we never share it
+- Complete account deletion available in-app
+- All data permanently deleted within 30 days
+- Service provided "as is" without warranties
+- Disputes resolved through arbitration
+- Apple App Store compliant
+- GDPR compliant

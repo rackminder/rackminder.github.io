@@ -3,19 +3,21 @@
 {{/* Hero Section */}}
 <section class="hero" id="hero">
   <div class="hero-background">
-    {{/* Placeholder for hero image - will be replaced with actual photography
-         Recommended: High-quality photo of outdoor enthusiast loading gear on roof rack
-         Search terms: "mountain bike roof rack", "kayak car roof", "outdoor adventure car" */}}
-    <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(44, 95, 45, 0.9) 0%, rgba(74, 144, 164, 0.9) 50%, rgba(44, 95, 45, 0.9) 100%), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%232C5F2D%22 width=%22100%22 height=%22100%22/><path fill=%22%234A90A4%22 d=%22M0 50 L25 40 L50 50 L75 45 L100 55 L100 100 L0 100 Z%22 opacity=%220.3%22/><path fill=%22%23E97451%22 d=%22M20 30 L30 25 L35 30 L30 35 Z%22/><circle cx=%2250%22 cy=%2260%22 r=%225%22 fill=%22%23F5F3F0%22 opacity=%220.6%22/></svg>'); background-size: cover; background-position: center;"></div>
+    <div class="hero-carousel">
+      <img src="{{ "/images/hero-bikes.jpg" | relURL }}" alt="SUV with mountain bikes on roof rack at scenic trailhead" class="hero-slide active">
+      <img src="{{ "/images/kayaks.jpg" | relURL }}" alt="SUV with kayaks on roof rack at misty mountain lake" class="hero-slide">
+      <img src="{{ "/images/skiing.jpg" | relURL }}" alt="SUV with skis on roof rack at snowy ski resort" class="hero-slide">
+    </div>
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
     <h1 class="hero-title">Never Worry About Your Garage Again</h1>
     <p class="hero-subtitle">RackMinder keeps your gear safe—and your garage door intact</p>
-    <div class="hero-cta">
-      <a href="#products" class="btn btn-primary btn-lg">Download for iOS</a>
-      <a href="#how-it-works" class="btn btn-secondary btn-lg">Learn More</a>
-    </div>
+    <a href="#problem" class="scroll-indicator" aria-label="Scroll down">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
   </div>
 </section>
 
@@ -199,12 +201,15 @@
               <text x="42" y="28" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600">App Store</text>
             </svg>
           </a>
-          <a href="#android-waitlist" class="store-badge store-badge-disabled">
+          <a href="#android-waitlist" class="store-badge">
             <svg viewBox="0 0 135 40" width="152" height="45">
-              <rect width="135" height="40" rx="5" fill="#3A3F44"/>
-              <path d="M20 10l-1.5 2.6-1.5-2.6h-1l2 3.4-2 3.4h1l1.5-2.6 1.5 2.6h1l-2-3.4 2-3.4h-1zm-7.5 2.6c-1.4 0-2.5 1.5-2.5 3.4s1.1 3.4 2.5 3.4 2.5-1.5 2.5-3.4-1.1-3.4-2.5-3.4zm10 0c-1.4 0-2.5 1.5-2.5 3.4s1.1 3.4 2.5 3.4 2.5-1.5 2.5-3.4-1.1-3.4-2.5-3.4z" fill="#6B7075"/>
-              <text x="35" y="16" fill="#6B7075" font-family="Inter, system-ui, sans-serif" font-size="8">Coming Soon on</text>
-              <text x="35" y="28" fill="#6B7075" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600">Google Play</text>
+              <rect width="135" height="40" rx="5" fill="#000" stroke="#A6A6A6" stroke-width="0.5"/>
+              <path d="M10.4 7.5c-.3.3-.4.8-.4 1.4v22.1c0 .6.2 1.1.5 1.4l.1.1 12.4-12.4v-.3L10.4 7.5z" fill="#00D7FE"/>
+              <path d="M27.1 24.3l-4.1-4.1v-.3l4.1-4.1.1.1 4.9 2.8c1.4.8 1.4 2.1 0 2.9l-5 2.7z" fill="#FFCE00"/>
+              <path d="M27.2 24.2L23 20l-12.6 12.6c.5.5 1.2.5 2.1 0l14.7-8.4z" fill="#F33C52"/>
+              <path d="M27.2 15.8l-14.7-8.4c-.9-.5-1.7-.4-2.1.1L23 20l4.2-4.2z" fill="#00EE76"/>
+              <text x="38" y="15" fill="#fff" font-family="system-ui, sans-serif" font-size="6.5" letter-spacing="0.5">COMING SOON ON</text>
+              <text x="38" y="28" fill="#fff" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Google Play</text>
             </svg>
           </a>
         </div>

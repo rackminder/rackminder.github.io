@@ -1,15 +1,17 @@
 {{ define "main" }}
 
-<section style="padding: 120px 0 80px; min-height: 100vh;">
-  <div class="container">
-    <header style="margin-bottom: 3rem; text-align: center;">
+<section class="legal-page" style="padding: 120px 0 80px; min-height: 100vh;">
+  <div class="container container--narrow">
+    <header style="margin-bottom: 2rem; text-align: center;">
       <h1>{{ .Title }}</h1>
-      {{ if .Description }}
-      <p class="text-muted">{{ .Description }}</p>
+      {{ if .Date }}
+      <p class="text-muted" style="font-size: 14px; margin-top: 0.5rem;">
+        Last Updated: {{ .Date.Format "January 2, 2006" }}
+      </p>
       {{ end }}
     </header>
 
-    <div class="content">
+    <div class="content" style="max-width: 800px; margin: 0 auto;">
       {{ .Content }}
 
       {{ if .Pages }}

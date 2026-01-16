@@ -183,6 +183,24 @@
   }
 
   // --------------------------------------------
+  // Hero Image Carousel
+  // --------------------------------------------
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  if (heroSlides.length > 1) {
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 seconds
+
+    function nextSlide() {
+      heroSlides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % heroSlides.length;
+      heroSlides[currentSlide].classList.add('active');
+    }
+
+    // Start the carousel
+    setInterval(nextSlide, slideInterval);
+  }
+
+  // --------------------------------------------
   // Initialize on DOM Ready
   // --------------------------------------------
   console.log('🚴 RackMinder website initialized');

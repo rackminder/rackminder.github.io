@@ -154,14 +154,25 @@ img {
 // Skip to main content link (accessibility)
 .skip-to-main {
   position: absolute;
-  top: -40px;
-  left: 0;
-  background: $color-accent;
-  color: $color-pure-white;
-  padding: $spacing-sm;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
   z-index: $z-index-modal;
 
   &:focus {
-    top: 0;
+    position: fixed;
+    top: $spacing-sm;
+    left: $spacing-sm;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background: $color-background;
+    color: $color-text;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-sm;
+    box-shadow: $shadow-md;
+    outline: 2px solid $color-accent;
   }
 }

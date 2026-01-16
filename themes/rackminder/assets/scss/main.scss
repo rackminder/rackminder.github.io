@@ -109,3 +109,94 @@ body::before {
 //     color: #2B2D2F;
 //   }
 // }
+
+// ============================================
+// Legal Pages (Privacy, Terms)
+// ============================================
+
+.legal-page {
+  h1 {
+    font-size: 28px !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .content {
+    line-height: 1.75;
+    font-size: 15px;
+
+    h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 20px !important;
+      font-weight: 600 !important;
+      color: $color-accent;
+    }
+
+    h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      color: $color-text;
+    }
+
+    ul, ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+
+    ul {
+      list-style-type: disc;
+
+      ul {
+        list-style-type: circle;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      padding-left: 0.25rem;
+
+      &::marker {
+        color: $color-text-muted;
+      }
+    }
+
+    a {
+      color: $color-accent;
+      text-decoration: underline;
+
+      &:hover {
+        color: lighten($color-accent, 10%);
+      }
+    }
+
+    strong {
+      color: $color-text;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include mobile {
+    padding: 100px 0 60px;
+
+    h1 {
+      font-size: 24px !important;
+    }
+
+    .content h2 {
+      font-size: 18px !important;
+    }
+
+    .content h3 {
+      font-size: 15px !important;
+    }
+  }
+}

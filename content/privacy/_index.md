@@ -153,10 +153,10 @@ EU residents have the right to lodge a complaint with a supervisory authority if
 
 ## Summary of Key Points
 
-✓ We collect only essential data to provide the Service
-✓ We do not share your data with any third parties
-✓ We do not use analytics or advertising services
-✓ Complete account deletion available in-app
-✓ All data permanently deleted within 30 days
-✓ GDPR compliant with full user rights
-✓ Apple App Store compliant
+- We collect only essential data to provide the Service
+- We do not share your data with any third parties
+- We do not use analytics or advertising services
+- Complete account deletion available in-app
+- All data permanently deleted within 30 days
+- GDPR compliant with full user rights
+- Apple App Store compliant
