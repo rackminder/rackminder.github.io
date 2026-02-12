@@ -1,5 +1,5 @@
 ---
-title: "RackMinder - Never Worry About Your Garage Again"
+title: "RackMinder - Never Worry About Your Garage and Gear Again"
 description: "RackMinder is the smart roof rack safety app that prevents garage damage. Using iBeacon technology, we alert you before you drive into your garage with bikes, kayaks, or skis still on your roof. Available for iPhone and Apple Watch."
 keywords:
   - roof rack safety
