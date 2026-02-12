@@ -1,6 +1,6 @@
 ---
 title: "RackMinder - Never Worry About Your Garage and Gear Again"
-description: "RackMinder is the smart roof rack safety app that prevents garage damage. Using iBeacon technology, we alert you before you drive into your garage with bikes, kayaks, or skis still on your roof. Available for iPhone and Apple Watch."
+description: "RackMinder is the smart roof rack safety app that prevents garage and gear damage. Using iBeacon technology, we alert you before you drive into your garage with bikes, kayaks, or skis still on your roof. Available for iPhone and Apple Watch."
 keywords:
   - roof rack safety
   - garage door protection
@@ -22,7 +22,7 @@ layout: index
 
 ## About RackMinder
 
-RackMinder is the essential app for outdoor enthusiasts who use roof racks. Whether you're a mountain biker, kayaker, skier, or adventure seeker, RackMinder gives you peace of mind by preventing costly garage door damage.
+RackMinder is the essential app for outdoor enthusiasts who use roof racks. Whether you're a mountain biker, kayaker, skier, or adventure seeker, RackMinder gives you peace of mind by preventing costly garage door and gear damage.
 
 Using smart iBeacon technology, RackMinder automatically detects when you're driving with gear on your roof and sends timely alerts before you pull into your garage. Simple, reliable, and designed for the way you live.
 
