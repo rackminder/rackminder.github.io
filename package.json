@@ -1,0 +1,24 @@
+{
+  "name": "rackminder.github.io",
+  "version": "1.0.0",
+  "description": "Official website for RackMinder - the smart roof rack safety app that prevents garage damage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rackminder/rackminder.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rackminder/rackminder.github.io/issues"
+  },
+  "homepage": "https://github.com/rackminder/rackminder.github.io#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}

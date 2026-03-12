@@ -1,0 +1,72 @@
+{{ define "main" }}
+
+<article style="padding: 120px 0 80px; min-height: 100vh;">
+  <div class="container container--narrow">
+
+    {{/* Breadcrumb */}}
+    <nav aria-label="Breadcrumb" style="margin-bottom: 2rem;">
+      <a href="{{ .Site.BaseURL }}" style="color: #6B7075;">Home</a>
+      <span style="color: #6B7075; margin: 0 0.5rem;">&gt;</span>
+      <span>{{ .Title }}</span>
+    </nav>
+
+    {{/* Page Header */}}
+    <header style="margin-bottom: 3rem; text-align: center;">
+      <h1>{{ .Title }}</h1>
+      <p class="text-muted" style="margin-top: 1rem;">{{ .Content }}</p>
+    </header>
+
+    {{/* Waitlist Form */}}
+    <div style="max-width: 500px; margin: 0 auto; text-align: center;">
+      <h3 style="margin-bottom: 0.5rem;">Get notified when we're back in stock</h3>
+      <p class="text-muted" style="margin-bottom: 1.5rem;">Enter your email and we'll let you know as soon as iBeacon Tags are available.</p>
+      <form id="beacon-waitlist-form" action="https://formspree.io/f/mgonyade" method="POST">
+        <div class="form-group">
+          <input type="email" name="email" class="form-input" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Notify Me</button>
+      </form>
+    </div>
+
+    {{/* Back to Home */}}
+    <div style="text-align: center; margin-top: 4rem;">
+      <a href="{{ .Site.BaseURL }}" class="btn btn-secondary">← Back to Home</a>
+    </div>
+
+  </div>
+</article>
+
+<script>
+  const form = document.getElementById('beacon-waitlist-form');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      const button = this.querySelector('button[type="submit"]');
+      button.disabled = true;
+      button.textContent = 'Submitting...';
+
+      try {
+        const response = await fetch(this.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(this)
+        });
+
+        if (response.ok) {
+          alert(`Thanks! We'll notify ${email} when iBeacon Tags are back in stock.`);
+          this.reset();
+        } else {
+          alert('Something went wrong. Please try again or email support@rackminder.com.');
+        }
+      } catch {
+        alert('Something went wrong. Please try again or email support@rackminder.com.');
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Notify Me';
+      }
+    });
+  }
+</script>
+
+{{ end }}

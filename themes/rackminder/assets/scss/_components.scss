@@ -38,12 +38,12 @@
 }
 
 .btn-primary {
-  background: $gradient-cta-button;
+  background: #24a7ed;
   color: $color-pure-white;
   box-shadow: $shadow-md;
 
   &:hover {
-    box-shadow: $shadow-glow-orange;
+    box-shadow: 0 8px 24px rgba(36, 167, 237, 0.4);
     color: $color-pure-white;
   }
 }

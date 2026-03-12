@@ -152,16 +152,33 @@
   // --------------------------------------------
   const androidForm = document.querySelector('#android-waitlist form');
   if (androidForm) {
-    androidForm.addEventListener('submit', function(e) {
+    androidForm.addEventListener('submit', async function(e) {
       e.preventDefault();
 
       const email = this.querySelector('input[type="email"]').value;
+      const button = this.querySelector('button[type="submit"]');
+      button.disabled = true;
+      button.textContent = 'Submitting...';
 
-      // TODO: Integrate with actual email service (Mailchimp, ConvertKit, etc.)
-      // For now, show a simple confirmation
-      alert(`Thanks for your interest! We'll notify ${email} when RackMinder launches on Android.`);
+      try {
+        const response = await fetch(this.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(this)
+        });
 
-      this.reset();
+        if (response.ok) {
+          alert(`Thanks! We'll notify ${email} when RackMinder launches on Android.`);
+          this.reset();
+        } else {
+          alert('Something went wrong. Please try again or email support@rackminder.com.');
+        }
+      } catch {
+        alert('Something went wrong. Please try again or email support@rackminder.com.');
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Join Android Waitlist';
+      }
     });
   }
 

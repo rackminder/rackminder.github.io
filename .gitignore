@@ -7,6 +7,11 @@
 .DS_Store
 Thumbs.db
 
+# Node.js
+node_modules/
+playwright-report/
+test-results/
+
 # Editor files
 *.swp
 *.swo
