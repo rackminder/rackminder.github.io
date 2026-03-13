@@ -146,7 +146,12 @@
   font-weight: $font-weight-regular;
   color: $color-text;
   padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-sm;
   transition: color $transition-fast;
+
+  &:focus {
+    outline: none;
+  }
 
   &:hover {
     color: $color-accent;
@@ -155,6 +160,8 @@
   &.active {
     color: $color-accent;
     font-weight: $font-weight-semibold;
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
   }
 }
 
