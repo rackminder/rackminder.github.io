@@ -1,0 +1,146 @@
+{{ define "main" }}
+
+<article style="padding: 100px 0 60px; min-height: 100vh;">
+  <div class="container" style="max-width: 680px;">
+
+    {{/* Header */}}
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <img src="{{ "/logo.svg" | relURL }}" alt="RackMinder" style="height: 60px; margin-bottom: 1.5rem;">
+      <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Welcome to RackMinder</h1>
+      <p class="text-muted">Follow these steps to protect your gear, your garage, and your car.</p>
+    </div>
+
+    {{/* What's in the box */}}
+    <div style="background: #3A3F44; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+      <h2 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: #24a7ed; margin-bottom: 1rem;">What You'll Need</h2>
+      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+        <li style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="color: #24a7ed; font-size: 1.2rem;">✓</span> Your RackMinder iBeacon tag
+        </li>
+        <li style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="color: #24a7ed; font-size: 1.2rem;">✓</span> Your iPhone (iOS 15 or later)
+        </li>
+        <li style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="color: #24a7ed; font-size: 1.2rem;">✓</span> The RackMinder app (free on the App Store)
+        </li>
+        <li style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="color: #24a7ed; font-size: 1.2rem;">✓</span> Your gear (bike, kayak, skis, etc.)
+        </li>
+      </ul>
+    </div>
+
+    {{/* Steps */}}
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+      {{/* Step 1 */}}
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <div style="min-width: 40px; height: 40px; background: #24a7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0;">1</div>
+        <div>
+          <h3 style="margin: 0 0 0.4rem; font-size: 1.1rem;">Purchase/Activate Your iBeacon Tag</h3>
+          <p class="text-muted" style="margin: 0 0 0.75rem;">RackMinder iBeacon tags are available on Amazon. Search for <strong style="color: #F5F3F0;">RackMinder iBeacon Tag</strong> or <a href="/buy/" style="color: #24a7ed;">purchase here</a>. Starting at $29.99.</p>
+          <p class="text-muted" style="margin: 0;">Once your tag arrives, locate the small plastic pull tab on the side of the tag and remove it. This activates the battery. The tag requires no charging, no pairing, and no setup — it begins broadcasting automatically.</p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #3A3F44;"></div>
+
+      {{/* Step 2 */}}
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <div style="min-width: 40px; height: 40px; background: #24a7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0;">2</div>
+        <div>
+          <h3 style="margin: 0 0 0.4rem; font-size: 1.1rem;">Download the RackMinder App</h3>
+          <p class="text-muted" style="margin: 0;">Search for <strong style="color: #F5F3F0;">RackMinder</strong> on the App Store. The app is free — no account or subscription required.</p>
+          <div style="margin-top: 1rem;">
+            <a href="/coming-soon/">
+              <svg viewBox="0 0 120 40" width="135" height="45">
+                <rect width="120" height="40" rx="5" fill="#000"/>
+                <path d="M24.5 20.5c0-3.1 2.5-4.6 2.6-4.7-1.4-2.1-3.6-2.4-4.4-2.4-1.9-.2-3.6 1.1-4.6 1.1-.9 0-2.4-1.1-4-1.1-2 0-3.9 1.2-5 3-2.1 3.7-.5 9.1 1.5 12.1 1 1.5 2.2 3.1 3.8 3 1.5-.1 2.1-1 3.9-1s2.4 1 4 1 2.7-1.5 3.7-2.9c1.2-1.7 1.7-3.3 1.7-3.4-.1 0-3.2-1.2-3.2-4.7zm-3-8.6c.8-1 1.4-2.4 1.2-3.8-1.2.1-2.7.8-3.5 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.8-.7 3.6-1.7z" fill="#fff"/>
+                <text x="42" y="16" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="8">Download on the</text>
+                <text x="42" y="28" fill="#fff" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600">App Store</text>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #3A3F44;"></div>
+
+      {{/* Step 3 */}}
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <div style="min-width: 40px; height: 40px; background: #24a7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0;">3</div>
+        <div>
+          <h3 style="margin: 0 0 0.4rem; font-size: 1.1rem;">Attach the Tag to Your Gear</h3>
+          <p class="text-muted" style="margin: 0;">Secure the iBeacon tag directly to your roof rack load — your bike frame, kayak hull, ski bag, or any item you carry on the roof. Use the included mount or zip tie. Place it where it won't be damaged by wind or weather.</p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #3A3F44;"></div>
+
+      {{/* Step 4 */}}
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <div style="min-width: 40px; height: 40px; background: #24a7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0;">4</div>
+        <div>
+          <h3 style="margin: 0 0 0.4rem; font-size: 1.1rem;">Add Your Gear in the App</h3>
+          <p class="text-muted" style="margin: 0;">Open RackMinder and tap <strong style="color: #F5F3F0;">Add Gear</strong>. Hold your iPhone near the tag — the app will detect it automatically. Give it a name (e.g. "Trek Bike" or "Kayak") and tap Save.</p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #3A3F44;"></div>
+
+      {{/* Step 5 */}}
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <div style="min-width: 40px; height: 40px; background: #24a7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0;">5</div>
+        <div>
+          <h3 style="margin: 0 0 0.4rem; font-size: 1.1rem;">Set Up Your Garage</h3>
+          <p class="text-muted" style="margin: 0;">In the app, tap <strong style="color: #F5F3F0;">Add Garage</strong>. Drive to your garage entrance and tap <strong style="color: #F5F3F0;">Set Location</strong> — RackMinder will save the GPS coordinates. Give it a name (e.g. "Home") and tap Save. Repeat for any additional garages.</p>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid #3A3F44;"></div>
+
+      {{/* Step 6 */}}
+      <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+        <div style="min-width: 40px; height: 40px; background: #24a7ed; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0;">6</div>
+        <div>
+          <h3 style="margin: 0 0 0.4rem; font-size: 1.1rem;">You're Protected</h3>
+          <p class="text-muted" style="margin: 0;">That's it. RackMinder runs silently in the background. When you approach your garage with gear loaded on your roof, you'll receive an alert on your iPhone, Apple Watch, or CarPlay — before you pull in.</p>
+        </div>
+      </div>
+
+    </div>
+
+    {{/* Tips */}}
+    <div style="background: #3A3F44; border-radius: 12px; padding: 1.5rem; margin-top: 2.5rem;">
+      <h2 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; color: #24a7ed; margin-bottom: 1rem;">Good to Know</h2>
+      <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+        <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="color: #24a7ed; margin-top: 2px;">→</span>
+          <span class="text-muted">The iBeacon tag battery lasts up to 2 years. The app will notify you when it needs replacing.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="color: #24a7ed; margin-top: 2px;">→</span>
+          <span class="text-muted">You can add multiple tags and multiple garages — perfect for families or multiple vehicles.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="color: #24a7ed; margin-top: 2px;">→</span>
+          <span class="text-muted">The tag is weatherproof. Leave it on your gear year-round.</span>
+        </li>
+        <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="color: #24a7ed; margin-top: 2px;">→</span>
+          <span class="text-muted">Make sure Bluetooth and Location Services are enabled for RackMinder in your iPhone Settings.</span>
+        </li>
+      </ul>
+    </div>
+
+    {{/* Support */}}
+    <div style="text-align: center; margin-top: 2.5rem; padding-bottom: 1rem;">
+      <p class="text-muted" style="font-size: 0.9rem;">Questions? We're here to help.<br>
+        <a href="mailto:support@rackminder.com" style="color: #24a7ed;">support@rackminder.com</a>
+      </p>
+      <a href="{{ .Site.BaseURL }}" class="btn btn-secondary" style="margin-top: 1rem;">← Back to RackMinder.com</a>
+    </div>
+
+  </div>
+</article>
+
+{{ end }}

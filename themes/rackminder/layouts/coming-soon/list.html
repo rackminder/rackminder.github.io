@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+<article style="padding: 120px 0 80px; min-height: 100vh;">
+  <div class="container" style="max-width: 600px; text-align: center;">
+
+    <img src="{{ "/logo.svg" | relURL }}" alt="RackMinder" style="height: 60px; margin-bottom: 2rem;">
+
+    <h1 style="font-size: 2rem; margin-bottom: 1rem;">Coming Soon</h1>
+    <p class="text-muted" style="font-size: 1.125rem; line-height: 1.75; margin-bottom: 2.5rem;">The RackMinder app is on its way to the App Store. Enter your email below and we'll notify you the moment it's available.</p>
+
+    <form id="app-waitlist-form" action="https://formspree.io/f/xyknjeda" method="POST" style="max-width: 440px; margin: 0 auto;">
+      <div class="form-group">
+        <input type="email" name="email" class="form-input" placeholder="Enter your email" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg">Notify Me</button>
+    </form>
+
+    <div style="margin-top: 3rem;">
+      <a href="{{ .Site.BaseURL }}" class="btn btn-secondary">← Back to RackMinder.com</a>
+    </div>
+
+  </div>
+</article>
+
+<script>
+  const form = document.getElementById('app-waitlist-form');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      const button = this.querySelector('button[type="submit"]');
+      button.disabled = true;
+      button.textContent = 'Submitting...';
+      try {
+        const response = await fetch(this.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(this)
+        });
+        if (response.ok) {
+          alert(`Thanks! We'll notify ${email} when RackMinder is available on the App Store.`);
+          this.reset();
+        } else {
+          alert('Something went wrong. Please try again or email support@rackminder.com.');
+        }
+      } catch {
+        alert('Something went wrong. Please try again or email support@rackminder.com.');
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Notify Me';
+      }
+    });
+  }
+</script>
+
+{{ end }}
