@@ -209,7 +209,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $color-background;
+  background-color: rgba($color-background, 0.95);
+  backdrop-filter: blur(10px);
   z-index: $z-index-modal;
   transform: translateX(100%);
   transition: transform $transition-normal;
