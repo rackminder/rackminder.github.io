@@ -214,6 +214,18 @@ section {
 // Feature Grid
 // --------------------------------------------
 
+.stats-grid {
+  grid-template-columns: 1fr !important;
+
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: 1fr;
