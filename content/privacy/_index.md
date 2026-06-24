@@ -1,162 +1,78 @@
 ---
 title: "Privacy Policy"
-date: 2026-01-02
+date: 2026-06-23
 ---
 
-**Last Updated: January 2, 2026**
+RackMinder LLC ("RackMinder," "we," "our," or "us") publishes the RackMinder iOS app (`com.rackminder.ios`). This Privacy Policy explains how the app handles information. RackMinder is designed to keep your data on your own devices and in your own iCloud account.
 
-## Introduction
+In plain terms: we do **not** run analytics, we do **not** show ads, we do **not** track you across other apps or websites, and we do **not** use any third-party data SDKs. We, the developer, do **not** have access to your location or to the garages, beacons, and trips you save in the app.
 
-Rack Minder LLC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our mobile application and related services (collectively, the "Service").
+## No account required
 
-This Privacy Policy complies with the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and Apple App Store requirements.
+RackMinder has no account, username, or password. It uses your device's existing iCloud sign-in to store your data in your own private iCloud. We do not ask for or collect an email address or other contact details to use the app. The Apple iCloud identity and any push notification tokens used for iCloud sync are handled by Apple's system frameworks; they are not collected or stored by RackMinder LLC.
 
-## Information We Collect
+## What the app processes
 
-### Information You Provide
+**Location.** RackMinder uses your device location — including in the background, which requires "Always" location permission — to detect when you are driving away from and back toward a garage you have saved, so it can alert you if you have a roof load on board. Your GPS coordinates are evaluated **on your device**, locally, against your saved garages. They are **not transmitted to RackMinder LLC** and are not stored on our servers.
 
-- **Account Information**: Email address and contact information
-- **Device Identity**: Device-based user identity from CloudKit and similar services
-- **Asset Information**: User-defined hardware IDs, rack locations, garage locations, and equipment details
-- **Preferences**: Application settings and user preferences
+**Bluetooth.** RackMinder uses Bluetooth to detect the iBeacon tag on your RackMinder beacon. This detection happens **on your device**. We do not receive your Bluetooth data.
 
-### Automatically Collected Information
+**Your content (garages, beacons, trips).** The garages you save, the beacons you register, and the trips ("outings") the app records are stored in **your own private iCloud account** (Apple's CloudKit private database) and sync across your own Apple devices through iCloud. This data is governed by Apple's iCloud terms and privacy policy. **RackMinder LLC does not have access to your private iCloud data.**
 
-- **Device Identifiers**: Push notification tokens and device IDs necessary for app functionality
-- **Usage Data**: Information about how you interact with the Service (stored locally on your device)
+**Reference catalog (download only).** The app downloads a **read-only public catalog** of beacon and product information so it can recognize valid RackMinder beacons. This is reference data flowing **to** your device. It contains no personal information about you and is not a collection of your data.
 
-## How We Use Your Information
+**Diagnostics.** The app keeps a local diagnostic log on your device to help with troubleshooting. This log **stays on your device** — there is no built-in way to export or send it, and we do not receive it.
 
-We use your information solely to:
+## What we do NOT do
 
-- Provide and maintain the Service
-- Send you notifications about your equipment and alerts
-- Enable account creation and authentication
-- Store your equipment inventory and preferences
-- Sync data across your devices via CloudKit
+- We do **not** collect or store your location on our servers.
+- We do **not** use analytics, telemetry, or usage tracking.
+- We do **not** display advertising.
+- We do **not** use third-party advertising, analytics, or tracking SDKs.
+- We do **not** track you across other companies' apps or websites.
+- We do **not** sell or rent your personal information, and we do **not** share it with third parties, partners, or advertisers.
+- We do **not** use your data for marketing.
+- We do **not** require an account, username, or password.
 
-**We do not:**
-- Share your data with any third parties, partners, or advertisers
-- Use analytics or tracking services
-- Sell or rent your personal information
-- Use your data for marketing purposes
+## How your data is protected
 
-## Data Storage and Security
+Your content is stored in your own private iCloud account and is protected under Apple's iCloud security and encryption practices and governed by Apple's terms. Data stored locally on your device is protected by the device's iOS data protection. Because we do not have access to your private iCloud data, we do not receive, store, or process it on our own servers.
 
-Your data is stored using a **hybrid approach**:
+## Data retention and deletion
 
-- **Cloud Storage**: Account data and sync information stored securely in CloudKit (Apple's cloud infrastructure)
-- **Local Storage**: Sensitive data and preferences stored encrypted on your device
+Because your garages, beacons, and trips live in **your own iCloud**, you control them. You can delete them in the app at any time, or remove the app and clear its iCloud data, which removes them from your iCloud in accordance with Apple's iCloud handling. RackMinder LLC holds no separate server-side copy of your content to delete on your behalf, because we do not have access to it. We do not maintain a server-side account for you, so there is no separate account for us to retain or erase.
 
-We implement industry-standard security measures including:
-- End-to-end encryption for data transmission
-- Encrypted local storage
-- Secure authentication protocols
-- Regular security updates
+## Your privacy rights
 
-## Your Rights (GDPR)
+Depending on where you live, you may have rights under laws such as the EU/UK General Data Protection Regulation (GDPR) and the California Consumer Privacy Act / California Privacy Rights Act (CCPA/CPRA), including the rights to access, correct, delete, port, restrict, or object to the processing of your personal information, and to withdraw consent.
 
-Under GDPR, you have the following rights:
+Because RackMinder does not collect or hold your personal information on our servers — your data stays on your device and in your own iCloud — most of these rights are exercised directly by you through your device and your Apple iCloud account. If you have a question or a request, contact us using the details below and we will respond as required by applicable law.
 
-### Right to Access
-You can request a copy of all personal data we hold about you.
+## Children's privacy
 
-### Right to Rectification
-You can correct inaccurate or incomplete data within the app settings.
+RackMinder is a driver-assistance utility intended for licensed drivers. It is **not directed to children** and is not intended for use by anyone under 16 years of age. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will take appropriate steps.
 
-### Right to Erasure ("Right to be Forgotten")
-You can request complete deletion of all your data at any time through the in-app account deletion feature. This will permanently remove:
-- All account information
-- All asset and location data
-- All preferences and settings
-- All CloudKit synced data
+## International data transfers
 
-### Right to Data Portability
-You can export your data in a machine-readable format from within the app.
+RackMinder LLC operates in the United States. Your content is stored in your own Apple iCloud account; iCloud storage and any associated transfers are handled by Apple. Where personal information is processed across borders, it is handled with the safeguards required by applicable law, including GDPR where it applies.
 
-### Right to Restrict Processing
-You can request that we limit how we process your data.
+## Third parties
 
-### Right to Object
-You can object to certain types of processing.
+The only third party involved in the app's data handling is **Apple**, through iCloud/CloudKit (a private database for your content and a public read-only database for the reference catalog) and the standard iOS frameworks. Your use of iCloud is governed by Apple's terms and privacy policy.
 
-### Right to Withdraw Consent
-You can withdraw consent at any time by deleting your account.
+## Supervisory authority
 
-## Account Deletion
+If you are in the EU/UK and believe we have not handled your personal information in accordance with applicable law, you have the right to lodge a complaint with your local data protection supervisory authority.
 
-**Complete data deletion is available directly within the app.**
+## Changes to this policy
 
-To delete your account and all associated data:
+We may update this policy from time to time. Material changes will be reflected here with a new "Last updated" date.
 
-1. Open the RackMinder app
-2. Navigate to Settings → Account
-3. Select "Delete Account"
-4. Confirm deletion
+## Contact
 
-Upon deletion, all of your data will be permanently removed from our systems within 30 days, including:
-- All account information
-- All equipment and location data
-- All CloudKit synced data
-- All device associations
+- General privacy questions: privacy@rackminder.com
+- App support: support@rackminder.com
+- EU/UK data protection (GDPR): dpo@rackminder.com — please include "GDPR Request" in the subject line.
+- Legal: legal@rackminder.com
 
-This action is irreversible.
-
-## Data Retention
-
-- **Active Accounts**: We retain your data as long as your account is active
-- **Deleted Accounts**: All data is permanently deleted within 30 days of account deletion
-- **Inactive Accounts**: Accounts inactive for 3 years may be deleted after notification
-
-## Children's Privacy
-
-RackMinder is not intended for use by children under 13 years of age. We do not knowingly collect personal information from children under 13.
-
-## International Data Transfers
-
-As a US-based company, your data may be transferred to and stored in the United States. We ensure appropriate safeguards are in place for international transfers in compliance with GDPR.
-
-## Third-Party Services
-
-**We do not use any third-party analytics, tracking, or advertising services.**
-
-The only third-party service we use is:
-- **Apple CloudKit**: For secure cloud storage and sync (governed by Apple's privacy policy)
-
-## Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time. We will notify you of any changes by:
-- Posting the new Privacy Policy on this page
-- Updating the "Last Updated" date
-- Sending you a notification through the app
-
-## Contact Us
-
-If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at:
-
-**Email**: privacy@rackminder.com
-**Support**: support@rackminder.com
-
-For GDPR-related requests, please include "GDPR Request" in your subject line.
-
-## Data Protection Officer
-
-For EU residents, you can contact our Data Protection Officer at:
-
-**Email**: dpo@rackminder.com
-
-## Supervisory Authority
-
-EU residents have the right to lodge a complaint with a supervisory authority if you believe we have violated your privacy rights.
-
----
-
-## Summary of Key Points
-
-- We collect only essential data to provide the Service
-- We do not share your data with any third parties
-- We do not use analytics or advertising services
-- Complete account deletion available in-app
-- All data permanently deleted within 30 days
-- GDPR compliant with full user rights
-- Apple App Store compliant
+RackMinder LLC, a Colorado limited liability company (United States).
