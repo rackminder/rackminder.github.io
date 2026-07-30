@@ -165,13 +165,11 @@
     </div>
     <div class="row" style="align-items: center; margin-top: 3rem;">
       <div class="col-12 col-6">
-        {{/* Placeholder for app screenshots carousel */}}
-        <div class="card" style="max-width: 200px; margin: 0 auto;">
-          <div class="card-image">
-            <div style="aspect-ratio: 9/16; background: linear-gradient(135deg, #2C5F2D 0%, #4A90A4 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white;">
-              <p>App Screenshot<br/>Placeholder</p>
-            </div>
-          </div>
+        {{/* App screenshots */}}
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <img src="{{ "/images/StatusDisarmed.png" | relURL }}" alt="RackMinder app disarmed status screen showing system monitoring with no load detected" style="width: 30%; max-width: 200px; min-width: 130px; border-radius: 20px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);">
+          <img src="{{ "/images/StatusArmed.png" | relURL }}" alt="RackMinder app armed status screen monitoring your load with a cancel outing button" style="width: 30%; max-width: 200px; min-width: 130px; border-radius: 20px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);">
+          <img src="{{ "/images/BeaconScreen.png" | relURL }}" alt="RackMinder app beacons screen to register a RackMinder beacon" style="width: 30%; max-width: 200px; min-width: 130px; border-radius: 20px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);">
         </div>
       </div>
       <div class="col-12 col-6">
